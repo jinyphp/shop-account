@@ -20,7 +20,7 @@ return new class extends Migration
 
             ## 맴버이음
             $table->string('user')->nullable(); // 실제 회원과 연결되는 join값
-            $table->string('name')->nullable();
+            $table->string('name')->nullable(); // 실제 이름?
 
             ## 정책 설명
             $table->text('description')->nullable();
@@ -34,6 +34,7 @@ return new class extends Migration
             $table->string('grade')->nullable();
 
             ## 혜택
+
             $table->string('benefits')->nullable(); // 외부조인
 
 

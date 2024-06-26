@@ -33,3 +33,7 @@
         @endif
     </tbody>
 </x-wire-table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb5093d018f1bc06e697dc80f82abb89470d827a
