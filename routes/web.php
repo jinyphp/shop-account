@@ -15,6 +15,11 @@ Route::middleware(['web'])->group(function(){
     Route::get('/admin/shop/membership', [
         \Jiny\Shop\Account\Http\Controllers\Admin\AdminShopMembership::class,
         "index"]);
+
+    Route::get('/admin/shop/user/bank',[
+        \Jiny\Shop\Account\Http\Controllers\Admin\AdminBankController::class,
+        "index"
+    ]);
 });
 
 
@@ -33,6 +38,11 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/shop/user/password/change', [
         \Jiny\Shop\Http\Controllers\User\UserPasswordChangeController::class,
         "index"]);
+
+
+
+
+
 });
 
 
@@ -41,6 +51,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
  * 관리자
  */
 Route::middleware(['auth:sanctum','verified'])->group(function(){
+
     Route::resource('/shop/admin/bank',
         \Jiny\Shop\Http\Controllers\Admin\AdminBankController::class);
 
@@ -83,4 +94,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
     Route::get('/shop/admin/user/phone', [
         \Jiny\Shop\Http\Controllers\Admin\AdminUserPhoneController::class,
         "index"]);
+
+
+
 });
