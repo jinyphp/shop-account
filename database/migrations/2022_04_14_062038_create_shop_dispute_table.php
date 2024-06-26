@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. 쇼핑몰 고객 분쟁 목록
      *
      * @return void
      */
@@ -20,16 +20,16 @@ return new class extends Migration
             $table->integer('level')->default(0);
             $table->integer('pos')->default(1);
 
-            $table->string('enable')->default(1);
+            $table->string('enable')->default(1);     // 분쟁 활성화 여부(표시여부)
 
-            $table->bigInteger('order_id'); //주문번호
-            $table->string('product')->nullable();      // 상품명
+            $table->bigInteger('order_id');     //주문번호
+            $table->string('product')->nullable();      //분쟁 일어난 상품명
 
-            $table->string('title')->nullable();  //제목
-            $table->string('status')->nullable();  //상태
+            $table->string('title')->nullable();  //분쟁 제목
+            $table->string('status')->nullable();  //상태(진행중?)
 
-            $table->string('start_date')->nullable();  //시작일자
-            $table->string('end_date')->nullable();  //종료일자
+            $table->string('start_date')->nullable();  //분쟁 시작일자
+            $table->string('end_date')->nullable();  //분쟁 종료일자
 
 
         });
