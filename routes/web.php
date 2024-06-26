@@ -20,7 +20,15 @@ Route::middleware(['web'])->group(function(){
         \Jiny\Shop\Account\Http\Controllers\Admin\AdminBankController::class,
         "index"
     ]);
+
+    Route::get('/admin/shop/shop_dispute',[
+        \Jiny\Shop\Account\Http\Controllers\Admin\AdminDisputeController::class,
+        "index"
+    ]);
+
 });
+
+
 
 
 /**
