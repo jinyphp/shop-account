@@ -10,6 +10,15 @@ Route::middleware(['web'])
 
 });
 
+// 인증없이 접속가능한 경로 처리
+Route::middleware(['web'])->group(function(){
+    Route::get('/admin/shop/membership', [
+        \Jiny\Shop\Account\Http\Controllers\Admin\AdminShopMembership::class,
+        "index"]);
+});
+
+
+
 /**
  * 회원(로그인) 사용자 링크
  */

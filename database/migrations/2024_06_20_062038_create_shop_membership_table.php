@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         ## 멤버십 회원구분 정책
-        Schema::create('membership', function (Blueprint $table) {
+        Schema::create('shop_membership', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
@@ -31,10 +31,10 @@ return new class extends Migration
 
             ## 회원등급
             // gold -> 이미지를 출력
-            $table->string('grade');
+            $table->string('grade')->nullable();
 
             ## 혜택
-            $table->string('benefits'); // 외부조인
+            $table->string('benefits')->nullable(); // 외부조인
 
 
 
@@ -49,6 +49,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('membership');
+        Schema::dropIfExists('shop_membership');
     }
 };
