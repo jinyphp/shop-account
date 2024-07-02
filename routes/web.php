@@ -26,6 +26,11 @@ Route::middleware(['web'])->group(function(){
         "index"
     ]);
 
+    Route::get('/admin/shop/shop_dispute_history',[
+        \Jiny\Shop\Account\Http\Controllers\Admin\AdminDisputeHistoryController::class,
+        "index"
+    ]);
+
 });
 
 

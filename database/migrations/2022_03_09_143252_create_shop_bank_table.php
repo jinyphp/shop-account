@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('bank_name');
             $table->string('bank_user')->nullable();
             $table->string('bank_account')->nullable();
-            $table->string('bank_swift')->nullable();
+            $table->string('bank_swift')->nullable();     // 신속한 해외송급 위한 11자리 코드.
 
             $table->text('description')->nullable();
 

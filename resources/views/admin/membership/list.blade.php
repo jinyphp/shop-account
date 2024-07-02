@@ -2,10 +2,13 @@
     {{-- 테이블 제목 --}}
     <x-wire-thead>
         <th width='50'>Id</th>
+        <th>사용자명</th>
         <th>이름</th>
-        <th>내용</th>
+        <th width='300'>정책설명</th>
         <th>결제허용</th>
-        <th width='200'>등록일자</th>
+        <th>회원등급</th>
+        <th>혜택</th>
+        <th>등록일자</th>
 
     </x-wire-thead>
     <tbody>
@@ -18,8 +21,11 @@
                 </td>
                 <td>
                     <x-click wire:click="edit({{$item->id}})">
-                        {{$item->name}}
+                        {{$item->user}}
                     </x-click>
+                </td>
+                <td>
+                    {{$item->name}}
                 </td>
                 <td>
                     {{$item->description}}
@@ -27,13 +33,13 @@
                 <td>
                     {{$item->pay_condition}}
                 </td>
-                <td width='200'>{{$item->created_at}}</td>
+                <td>{{$item->grade}}</td>
+
+                <td>{{$item->benefits}}</td>
+
+                <td>{{$item->created_at}}</td>
             </x-wire-tbody-item>
             @endforeach
         @endif
     </tbody>
 </x-wire-table>
-<<<<<<< HEAD
-=======
-
->>>>>>> bb5093d018f1bc06e697dc80f82abb89470d827a

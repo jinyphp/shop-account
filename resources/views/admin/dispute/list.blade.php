@@ -3,7 +3,7 @@
     <x-wire-thead>
         <th width='200'>주문번호/상품</th>
         <th >분쟁제목</th>
-        <th width='300'>진행상태</th>
+        <th >진행상태</th>
         <th width='200'>분쟁시작일</th>
         <th >분쟁종료일</th>
 

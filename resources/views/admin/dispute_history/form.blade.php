@@ -1,13 +1,13 @@
 <div>
     <x-navtab class="mb-3 nav-bordered">
 
-        <!-- formTab -->
+        <!-- formTab - forms라는 이름의 배열로 묶여서 넘어온다. -> forms.~ -->
+        {{-- column 이름, 어떤 정보가 어떤 column에 들어가는지 명시. 추가 눌렀을 때 그 팝업창(input) --}}
         <x-navtab-item class="show active" >
 
             <x-navtab-link class="rounded-0 active">
                 <span class="d-none d-md-block">기본정보</span>
             </x-navtab-link>
-
 
             <x-form-hor>
                 <x-form-label>활성화</x-form-label>
@@ -19,10 +19,10 @@
             </x-form-hor>
 
             <x-form-hor>
-                <x-form-label>국가</x-form-label>
+                <x-form-label>분쟁분류번호</x-form-label>
                 <x-form-item>
                     {!! xInputText()
-                        ->setWire('model.defer',"forms.country")
+                        ->setWire('model.defer',"forms.dispute_id")
                         ->setWidth("standard")
                     !!}
                 </x-form-item>
@@ -30,10 +30,10 @@
 
 
             <x-form-hor>
-                <x-form-label>통화</x-form-label>
+                <x-form-label>분쟁내용</x-form-label>
                 <x-form-item>
                     {!! xInputText()
-                        ->setWire('model.defer',"forms.currency")
+                        ->setWire('model.defer',"forms.content")
                         ->setWidth("standard")
                     !!}
                 </x-form-item>
@@ -42,40 +42,20 @@
 
 
             <x-form-hor>
-                <x-form-label>은행명</x-form-label>
+                <x-form-label>사진</x-form-label>
                 <x-form-item>
                     {!! xInputText()
-                        ->setWire('model.defer',"forms.bank_name")
+                        ->setWire('model.defer',"forms.image")
                         ->setWidth("standard")
                     !!}
                 </x-form-item>
             </x-form-hor>
 
             <x-form-hor>
-                <x-form-label>예금주</x-form-label>
+                <x-form-label>이메일</x-form-label>
                 <x-form-item>
                     {!! xInputText()
-                        ->setWire('model.defer',"forms.bank_user")
-                        ->setWidth("standard")
-                    !!}
-                </x-form-item>
-            </x-form-hor>
-
-            <x-form-hor>
-                <x-form-label>계좌번호</x-form-label>
-                <x-form-item>
-                    {!! xInputText()
-                        ->setWire('model.defer',"forms.bank_account")
-                        ->setWidth("standard")
-                    !!}
-                </x-form-item>
-            </x-form-hor>
-
-            <x-form-hor>
-                <x-form-label>Swift</x-form-label>
-                <x-form-item>
-                    {!! xInputText()
-                        ->setWire('model.defer',"forms.bank_swift")
+                        ->setWire('model.defer',"forms.email")
                         ->setWidth("standard")
                     !!}
                 </x-form-item>
