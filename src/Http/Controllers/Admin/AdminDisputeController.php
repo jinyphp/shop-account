@@ -28,6 +28,9 @@ class AdminDisputeController extends WireTablePopupForms
 
         // 신규 데이터 입력 및 수정폼 입니다.
         $this->actions['view']['form'] = "jiny-shop-account::admin.dispute.form";
+
+        $this->actions['title'] = "분쟁조정";
+        $this->actions['subtitle'] = "회원별 구매상품에 대한 분쟁을 조정합니다.";
     }
 
 
