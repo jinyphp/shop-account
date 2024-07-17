@@ -88,7 +88,7 @@ Route::middleware(['web'])->group(function(){
  * 회원(로그인) 사용자 링크
  */
 Route::middleware(['web'/*'auth:sanctum','verified'*/])->group(function(){
-    Route::get('/myAccount/{user_id}', [         //pass?path? variable
+    Route::get('/myAccount/{user_id}', [         //path variable
         \Jiny\Shop\Account\Http\Controllers\User\MyAccountController::class,
         "index"]);
 
