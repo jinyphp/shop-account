@@ -22,7 +22,7 @@ class JinyShopAccountServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/setting.php' => config_path('jiny/shop/account.php'),
         ]);
-        
+
 
 
     }
@@ -31,11 +31,18 @@ class JinyShopAccountServiceProvider extends ServiceProvider
     {
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
-            
-
+            Livewire::component('ListCashHistory',
+            \Jiny\Shop\Account\Http\Livewire\CashHistoryLivewireController::class);
         });
 
+        $this->app->afterResolving(BladeCompiler::class, function () {
+            Livewire::component('ListMoneyHistory',
+            \Jiny\Shop\Account\Http\Livewire\MoneyHistoryLivewireController::class);
+        });
 
-
+        $this->app->afterResolving(BladeCompiler::class, function () {
+            Livewire::component('ListPointHistory',
+            \Jiny\Shop\Account\Http\Livewire\PointHistoryLivewireController::class);
+        });
     }
 }

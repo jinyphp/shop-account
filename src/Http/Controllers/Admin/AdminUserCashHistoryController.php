@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 use Jiny\WireTable\Http\Controllers\WireTablePopupForms;
-class AdminUserMoneyHistoryController extends WireTablePopupForms
+class AdminUserCashHistoryController extends WireTablePopupForms
 {
     public function __construct()
     {
@@ -19,8 +19,8 @@ class AdminUserMoneyHistoryController extends WireTablePopupForms
         ##
         $this->actions['table'] = "user_cash_history"; // 테이블 정보
 
-        $this->actions['view_list'] = "jiny-shop-account::admin.user_cash_history.list";
-        $this->actions['view_form'] = "jiny-shop-account::admin.user_cash_history.form";
+        $this->actions['view']['list'] = "jiny-shop-account::admin.user_cash_history.list";
+        $this->actions['view']['form'] = "jiny-shop-account::admin.user_cash_history.form";
 
     }
 
